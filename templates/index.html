@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+<h1>Trips</h1>
+
+<div class="row">
+
+
+
+{% for trip in trips %}
+
+<div class="card col-lg-4" style="width: 18rem;">
+  <img class = "image-custom card-img-top" src='{{trip["image_url"]}}' class="card-img-top" alt='{{trip["alt_description"]}}'>
+  <div class="card-body">
+    <h5 class="card-title">{{trip["destination"]}}</h5>
+    <p class="card-text">{{trip["start_date"]}} to {{trip["end_date"]}}</p>
+    <form action"/" method="post">
+      <button class="btn btn-dark" type="submit" name="trip_id" value='{{trip["trip_id"]}}'>Edit</button>
+    </form>
+  </div>
+</div>
+
+{% endfor %}
+
+</div>
+
+
+
+
+
+
+{% endblock %}
+

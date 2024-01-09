@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Trip
+{% endblock %}
+
+{% block main %}
+
+<h1>Add Trip</h1>
+
+<form action"/create" method="post">
+    <div class="form-group">
+    <input autocomplete="off" autofocus class="form-control" name="destination" placeholder="Destination" type="text">
+    </div>
+
+    <div class="form-group">
+    <input autocomplete="off" autofocus class="form-control" name="start_date" placeholder ="Start yyyy-mm-dd" type="text">
+    </div
+
+    <div class-"form-group">
+    <input autocomplete="off" autofocus class="form-control" name="end_date" placeholder ="End yyyy-mm-dd" type="text">
+    </div>
+
+    <br></br>
+
+    <button class="btn btn-dark" type="submit">Add</button>
+
+</form>
+
+
+
+{% endblock %}
